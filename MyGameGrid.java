@@ -1,10 +1,13 @@
 import ch.aplu.jgamegrid.*;
+import java.awt.Color;
 
 public class MyGameGrid extends GameGrid
 {
   public MyGameGrid()
   {
-    super(700, 700, 1, null, "https://i.pinimg.com/736x/e2/6f/29/e26f2931d3ecfbf0f1b21dfc1043c43b.jpg", false);
+    super(700, 700, 1, new Color (0,0,153), null, false);
+    Raumschiff meinRaumschiff = new Raumschiff();
+    addActor(meinRaumschiff, new Location(350, -500));
     show();
   }
 
