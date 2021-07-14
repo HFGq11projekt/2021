@@ -7,8 +7,8 @@ public class MyGameGrid extends GameGrid
   {
     super(700, 700, 1, new Color (0,0,153), null, true);
     Raumschiff meinRaumschiff = new Raumschiff();
-    addActor(meinRaumschiff, new Location(350, 500));
-    addKeyListener(meinRaumschiff);
+    addActor(meinRaumschiff, new Location(350, 650));
+    addKeyRepeatListener(meinRaumschiff);
     show();
     doRun();
   }
@@ -17,4 +17,5 @@ public class MyGameGrid extends GameGrid
   {
     new MyGameGrid();
   }
+  
 }
