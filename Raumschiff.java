@@ -1,33 +1,33 @@
+import ch.aplu.jgamegrid.*;
+import java.awt.event.KeyEvent;
 
-/**
- * Beschreiben Sie hier die Klasse Raumschiff.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
-public class Raumschiff
+public class Raumschiff extends Actor implements GGKeyListener
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
-
-    /**
-     * Konstruktor für Objekte der Klasse Raumschiff
-     */
-    public Raumschiff()
-    {
-        // Instanzvariable initialisieren
-        x = 0;
+    
+    public Raumschiff() {
+        super("img/Raumschiff.png");
+    }
+    
+    public void act() {
+        
+    }
+    
+    public boolean keyPressed(KeyEvent e) {
+        switch (e.getKeyCode()) {
+            case KeyEvent.VK_RIGHT:
+                setDirection(0);
+                break;
+            case KeyEvent.VK_LEFT:
+                setDirection(180);
+                break;
+        }
+        return false;
+    }
+    
+    public boolean keyReleased(KeyEvent e) {
+        return false;
     }
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
-    {
-        // tragen Sie hier den Code ein
-        return x + y;
-    }
+    
+    
 }
