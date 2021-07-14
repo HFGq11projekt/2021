@@ -9,23 +9,27 @@ public class Raumschiff extends Actor implements GGKeyListener
     }
     
     public void act() {
-        
+        move();
+        if (isNearBorder())
+        turn (180);
     }
     
-    public boolean keyPressed(KeyEvent e) {
-        switch (e.getKeyCode()) {
-            case KeyEvent.VK_RIGHT:
+    public boolean keyPressed(KeyEvent evt) {
+        switch (evt.getKeyCode()) {
+            case KeyEvent.VK_D:
                 setDirection(0);
+                
                 break;
-            case KeyEvent.VK_LEFT:
+            case KeyEvent.VK_A:
                 setDirection(180);
+                
                 break;
         }
-        return false;
+        return true;
     }
     
     public boolean keyReleased(KeyEvent e) {
-        return false;
+        return true;
     }
 
     
