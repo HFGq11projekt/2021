@@ -7,10 +7,11 @@ public class MyGameGrid extends GameGrid
     private Random meinZufallsgenerator;
     public MyGameGrid()
     {
-        super(700, 700, 1, new Color (0,0,153), null, true);
+        super(700, 700, 1, null, "img/background.png", true);
         Raumschiff meinRaumschiff = new Raumschiff();
         addActor(meinRaumschiff, new Location(350, 650));
         addKeyRepeatListener(meinRaumschiff);
+        addMouseListener(meinRaumschiff, GGMouse.lClick);
         meinZufallsgenerator = new Random();
         show();
         doRun();
