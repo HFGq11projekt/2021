@@ -7,5 +7,19 @@ public class Schuss extends Actor
     }
     public void act() {
         move();
+        tryToEat();
+  }
+
+  private void tryToEat()
+  {
+    show(0);
+    Actor actor = gameGrid.getOneActorAt(getLocation(), Asteroid.class);
+    if (actor != null)
+    {
+      actor.removeSelf();
+      
     }
+  }
 }
+
+

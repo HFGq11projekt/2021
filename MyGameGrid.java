@@ -23,6 +23,8 @@ public class MyGameGrid extends GameGrid
     }
 
     public void act(){
-        addActor(new Asteroid(), new Location(meinZufallsgenerator.nextInt(700),-30));
+        var asteroid = new Asteroid();
+        addActor(asteroid, new Location(meinZufallsgenerator.nextInt(700),-30));
+        asteroid.setDirection(90);
     }
 }
